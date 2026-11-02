@@ -1,12 +1,24 @@
 import qrcode
 
-data = input("enter a link:").strip()
-file= input("enter file name:").strip()
 
-qr = qrcode.QRCode()
-qr.add_data(data)
+def main():
+    data = input("Enter a link or text: ").strip()
+    if not data:
+        print("The link or text cannot be empty.")
+        return
 
-img = qr.make_image()
+    filename = input("Enter a file name (for example, code.png): ").strip()
+    if not filename:
+        print("The file name cannot be empty.")
+        return
 
-img.save(file)
-print("file created!")
+    qr = qrcode.QRCode()
+    qr.add_data(data)
+    qr.make(fit=True)
+    image = qr.make_image()
+    image.save(filename)
+    print(f"QR code saved as {filename}.")
+
+
+if __name__ == "__main__":
+    main()

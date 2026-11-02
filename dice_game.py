@@ -1,18 +1,22 @@
 import random
 
-# this is dice game , i built using while loop
 
-while True:
-    user_in = input("roll the dice? (y/n):").lower()
+def main():
+    while True:
+        user_choice = input("Roll the dice? (y/n): ").strip().lower()
 
-    if user_in == "y":
-        dice1= random.randint(1,6)
-        dice2=random.randint(1,6)
-        print(f"({dice1},{dice2})")
-    elif user_in == "n":
-        print("thankyou")
-        break
-    else:
-        print("invalid choice!")
+        if user_choice == "y":
+            first_die = random.randint(1, 6)
+            second_die = random.randint(1, 6)
+            print(f"({first_die}, {second_die})")
+        elif user_choice == "n":
+            print("Thanks for playing!")
+            break
+        else:
+            print("Please enter y or n.")
+
+
+if __name__ == "__main__":
+    main()
 
         
