@@ -1,33 +1,48 @@
-# Small Python Projects
+# Shashank's Python Projects
 
-This folder is a collection of small Python programs I wrote to practise
-the basics. They run in a terminal and are meant to be easy to try and modify.
+Welcome! This repository is a collection of small Python projects by Shashank.
+They are beginner-friendly programs for practicing Python through games and
+useful little tools.
 
-## What's here
+## Projects
 
-- `dice_game.py` - roll two dice as many times as you like.
-- `num_guess.py` - guess a randomly chosen number from 1 to 100.
-- `rock _game.py` - play Rock, Paper, Scissors against the computer.
-- `qr_gen.py` - make a QR code from a link or any text you enter.
+- **Dice Game** (`dice_game.py`) - Roll two dice whenever you like.
+- **Number Guessing Game** (`num_guess.py`) - Try to guess a randomly chosen
+  number from 1 to 100. The game tells you if your guess is too high or too low.
+- **Rock, Paper, Scissors** (`rock _game.py`) - Play the classic game against
+  the computer.
+- **QR Code Generator** (`qr_gen.py`) - Turn text or a link into a QR code image.
+- **Password Manager** (`password_m.py`) - A simple example of a password
+  manager with a master-password prompt and JSON files for storing entries.
 
 ## Getting started
 
-Install Python 3, then open a terminal in this folder. Run any program with
-Python, for example:
+Install Python 3, open a terminal in this folder, and run a project like this:
 
 ```text
 python dice_game.py
-python num_guess.py
-python "rock _game.py"
 ```
 
-The games and random-number example use only Python's standard library. The QR
-code generator needs one extra package:
+You can run any of the other projects by replacing `dice_game.py` with its file
+name. The QR code generator needs the `qrcode` package with Pillow:
 
 ```text
 python -m pip install "qrcode[pil]"
-python qr_gen.py
 ```
 
-When prompted, enter the link or text for the QR code and a file name such as
-`my_qr.png`. The image is saved in the current folder.
+Then run `python qr_gen.py` and follow the prompts to create an image.
+
+## Password manager note
+
+The password manager is a learning project, not a secure way to store real
+passwords. Its JSON files store passwords as plain text, so only use sample
+details. It expects `mas_pass.json` to contain a password, like this:
+
+```json
+{
+    "password": "your-master-password"
+}
+```
+
+Saved entries are kept in `passwords.json`. The add option in the current menu
+is not connected yet, so it displays the saved entries instead of adding one.
