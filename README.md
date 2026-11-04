@@ -9,6 +9,9 @@ useful little tools.
 - **Dice Game** (`dice_game.py`) - Roll two dice whenever you like.
 - **Number Guessing Game** (`num_guess.py`) - Try to guess a randomly chosen
   number from 1 to 100. The game tells you if your guess is too high or too low.
+- **Arithmetic Challenge** (`problems.py`) - Practice random addition,
+  subtraction, and multiplication questions. It tracks your answers and shows a
+  final time when you finish all 10 problems.
 - **Rock, Paper, Scissors** (`rock _game.py`) - Play the classic game against
   the computer.
 - **QR Code Generator** (`qr_gen.py`) - Turn text or a link into a QR code image.
@@ -21,6 +24,12 @@ Install Python 3, open a terminal in this folder, and run a project like this:
 
 ```text
 python dice_game.py
+```
+
+For the arithmetic challenge:
+
+```text
+python problems.py
 ```
 
 You can run any of the other projects by replacing `dice_game.py` with its file
